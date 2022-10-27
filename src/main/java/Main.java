@@ -26,7 +26,7 @@ public class Main {
         System.out.println("Введите два слова: название товара и количество. Или end");
 */
         var purchase = new Purchase();
-        purchase.printPurchases();
+        purchase.printAssortment();
 
         Scanner scanner = new Scanner(System.in);
         while (true) {
