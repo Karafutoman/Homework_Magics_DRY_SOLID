@@ -30,8 +30,8 @@ public class Purchase {
     public Purchase() {
         // Dependency Inversion Principle - в принципе сюда подходит
         // описываем интерфейс, скрывая реализацию
-        Assortment dataBase = Assortmentproduct.getInstance();
-        products = dataBase.getProducts();
+        Assortment Assortment  = Assortmentproduct.getInstance();
+        products = Assortment.getProducts();
     }
 
     public void addPurchase(String title, int count) {
@@ -80,7 +80,7 @@ public class Purchase {
         }
     */
     // Выыодим на печать ассортимент и цены
-    public void printShowCase() {
+    public void printAssortment() {
         System.out.println("В МАГАЗИНЕ В НАЛИЧИИ");
         for (Map.Entry<String, Integer> productAndPrice : products.entrySet()) {
             System.out.println(productAndPrice.getKey() + " за " + productAndPrice.getValue() + " руб./шт.");
